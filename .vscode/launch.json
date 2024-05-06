@@ -1,0 +1,12 @@
+
+
+{
+    "name": "Python: Django Runserver",
+    "type": "python",
+    "request": "launch",
+    "program": "${workspaceFolder}/Complete path/manage.py",
+    "args": [
+        "runserver",
+    ],
+    "django": true
+ }

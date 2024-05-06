@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>OOhyPage</title>
+</head>
+<body>
+    <form method="post" enctype="multipart/form-data" action="{% url 'create_objects' %}">
+        {% csrf_token %}
+        <!-- Other form fields go here -->
+        <input type="file" name="pulse_file">
+        <input type="file" name="tongue_file">
+        <!-- Additional input fields for pulse_type_value and tongue_type_value -->
+        <label for="pulse_type_value">Pulse Type:</label>
+        <select name="pulse_type_value" id="pulse_type_value">
+            <option value="1">Wind</option>
+            <option value="2">Humid</option>
+            <option value="3">Cold</option>
+        </select>
+        <label for="tongue_type_value">Tongue Type:</label>
+        <select name="tongue_type_value" id="tongue_type_value">
+            <option value="1">Tongue type 1</option>
+            <option value="2">Tongue type 2</option>
+            <option value="3">Tongue type 3</option>
+        </select>
+        <button type="submit">Submit</button>
+    </form>
+    
+    <h1>OOHY RESEARCH</h1>
+    <a href="mongodb://54.166.103.115:27017/" target="_blank">Open MongoDB Atlas</a>
+</body>
+</html>
