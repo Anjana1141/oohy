@@ -22,6 +22,6 @@ class Migration(migrations.Migration):
             ],
         ),
         migrations.DeleteModel(
-            name='MyModel',
+            name='models',
         ),
     ]

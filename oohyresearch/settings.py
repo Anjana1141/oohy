@@ -1,13 +1,6 @@
 import os
 from pathlib import Path
-from env import AWS_ACCESS_KEY_ID
-from env import AWS_SECRET_ACCESS_KEY
-from env import AWS_STORAGE_BUCKET_NAME
-from env import AWS_S3_REGION_NAME
-from env import AWS_S3_SIGNATURE_NAME
-from env import HOST
-from env import NAME
-
+from env import AWS_ACCESS_KEY_ID, AWS_SECRET_ACCESS_KEY, AWS_STORAGE_BUCKET_NAME, AWS_S3_REGION_NAME, AWS_S3_SIGNATURE_NAME
 
 # Define base directory
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -72,10 +65,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'djongo',
         'ENFORCE_SCHEMA': False,
-        'name': NAME,
-        'COLLECTION':'collection',
+        'name': 'data',
+        'COLLECTION':'dataentries',
         'CLIENT': {
-            'host': HOST,
+            'host': 'mongodb://54.166.103.115:27017/',
         },
     }
 }
@@ -112,19 +105,15 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-# Internationalization settings
+# Internationalization
 LANGUAGE_CODE = 'en-us'
 TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
-# settings.p
-
-STATIC_URL = '/static/'
-
 # Static files (CSS, JavaScript, Images)
-
+STATIC_URL = '/static/'
 
 # Default primary key field type
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
