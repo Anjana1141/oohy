@@ -1,7 +1,7 @@
-# from dotenv import load_dotenv
-# import os
+from dotenv import load_dotenv
+import os
 
-# load_dotenv()
+load_dotenv()
 
 DATA_COLLECTION_BUCKET = 'testoohybucket'
 AWS_ACCESS_KEY_ID = 'AKIATCKARCOUJYVJ3T4U'
